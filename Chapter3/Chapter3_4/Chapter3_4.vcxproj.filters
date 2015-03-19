@@ -30,6 +30,9 @@
     <ClInclude Include="Chain.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ChainIterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Chain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainIterator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

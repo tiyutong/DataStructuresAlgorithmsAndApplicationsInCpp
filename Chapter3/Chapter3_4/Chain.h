@@ -5,11 +5,14 @@
 using namespace std;
 
 template<class T>class Chain;
+template<class T>class ChainIterator;
 
 template<class T>
 class ChainNode
 {
 	friend class Chain<T>;
+	friend class ChainIterator<T>;
+
 private:
 	T data;
 	ChainNode<T>* link;
@@ -18,12 +21,15 @@ private:
 template<class T>
 class Chain
 {
+	friend class ChainIterator<T>;
 public:
 	Chain(void)
 	{
 		first = 0;
 	}
 	~Chain(void);
+
+	Chain(const Chain& c);
 
 	bool IsEmplty() const
 	{
@@ -36,11 +42,56 @@ public:
 	Chain<T>& Delete(int k, T& x);
 	Chain<T>& Insert(int k,const T& x);
 	void Output(ostream& out)const;
+	void Erase();
+	void Zero()
+	{
+		first = 0;
+	}
+	Chain<T>& Append(const T& x);
+
+	Chain& operator = (const Chain& c);
 
 private:
 	ChainNode<T> *first;
+	ChainNode<T> *last;
 
 };
+
+template<class T>
+Chain<T>::Chain(const Chain<T>& c)
+{
+	first = 0;
+
+	int index = 0;
+	int* px;
+	ChainIterator<int> cIter;
+	px = cIter.Initialize(c);
+	while(px)
+	{
+		Insert(index++,*px);
+		px = cIter.Next();
+	}
+}
+
+template<class T>
+Chain<T>& Chain<T>::operator = (const Chain<T>& c)
+{
+	if(first != c.first)
+	{
+		Erase();
+		first = 0;
+		int index = 0;
+		int* px;
+		ChainIterator<int> cIter;
+		px = cIter.Initialize(c);
+		while(px)
+		{
+			Insert(index++,*px);
+			px = cIter.Next();
+		}
+	}
+	return *this;
+}
 
 template<class T>
 Chain<T>::~Chain()
@@ -152,6 +203,10 @@ Chain<T>& Chain<T>::Delete(int k, T& x)
 		}
 
 		p = q->link;
+		if(p == last)
+		{
+			last = q;
+		}
 		q->link = p->link;
 	}
 	x = p->data;
@@ -190,5 +245,44 @@ Chain<T>& Chain<T>::Insert(int k, const T& x)
 		y->link = first;
 		first = y;
 	}
+
+	if(!y->link)
+	{
+		last = y;
+	}
+
+	return *this;
+}
+
+template<class T>
+void Chain<T>::Erase()
+{
+	ChainNode<T> *next;
+	while(first)
+	{
+		next = first->link;
+		delete first;
+		first =  next;
+	}
+}
+
+template<class T>
+Chain<T>& Chain<T>::Append(const T& x)
+{
+	ChainNode<T> *y;
+	y = new ChainNode<T>;
+	y->data = x;
+	y->link = 0;
+
+	if(first)
+	{
+		last->link = y;
+		last = y;
+	}
+	else
+	{
+		first = last = y;
+	}
+
 	return *this;
 }

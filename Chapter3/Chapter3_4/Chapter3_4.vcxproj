@@ -80,12 +80,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chain.h" />
+    <ClInclude Include="ChainIterator.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="xcept.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chain.cpp" />
+    <ClCompile Include="ChainIterator.cpp" />
     <ClCompile Include="Chapter3_4.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

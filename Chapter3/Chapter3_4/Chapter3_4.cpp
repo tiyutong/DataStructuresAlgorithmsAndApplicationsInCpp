@@ -4,18 +4,38 @@
 #include "stdafx.h"
 #include "Chain.h"
 #include <iostream>
+#include "ChainIterator.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Chain<int> test;
 	test.Insert(0,3);
 	test.Insert(1, 4);
-	cout << test;
-	int x;
+	cout << test << endl;;
 
-	test.Delete(2,x);
+	Chain<int> test2(test);
+	cout << test2 << endl;
+
 	
-	cout << test;
+	Chain<int> test3 = test2;
+	cout << test3 << endl;
+	//int x;
+
+	//test.Delete(2,x);
+	//
+	//cout << test;
+
+	//cout << endl;
+
+	//int* px;
+	//ChainIterator<int> c;
+	//px = c.Initialize(test);
+
+	//while(px)
+	//{
+	//	cout << *px << ' ';
+	//	px = c.Next();
+	//}
 	return 0;
 }
 
