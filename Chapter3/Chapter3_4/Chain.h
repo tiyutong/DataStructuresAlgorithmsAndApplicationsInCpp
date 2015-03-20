@@ -22,6 +22,7 @@ template<class T>
 class Chain
 {
 	friend class ChainIterator<T>;
+	template<class T> friend Chain<T> Alternate(Chain<T>& a,Chain<T>& b);
 public:
 	Chain(void)
 	{
@@ -41,6 +42,8 @@ public:
 	int Seartch(const T& x)const;
 	Chain<T>& Delete(int k, T& x);
 	Chain<T>& Insert(int k,const T& x);
+	Chain<T>& Reverse();
+	Chain<T>& InsertionSort();
 	void Output(ostream& out)const;
 	void Erase();
 	void Zero()
@@ -50,6 +53,8 @@ public:
 	Chain<T>& Append(const T& x);
 
 	Chain& operator = (const Chain& c);
+
+	ChainNode<T>* GetLastNode(ChainNode<T>* node);
 
 private:
 	ChainNode<T> *first;
@@ -282,6 +287,80 @@ Chain<T>& Chain<T>::Append(const T& x)
 	else
 	{
 		first = last = y;
+	}
+
+	return *this;
+}
+
+template<class T>
+Chain<T>& Chain<T>::Reverse()
+{
+	last = first;
+	ChainNode<T> *current = first;
+	ChainNode<T> *next = current->link;
+	while(next)
+	{
+		ChainNode<T> *tmp = next->link;
+		next->link = current;
+		current = next;
+		next = tmp;
+	}
+	first = current;
+	last->link = 0;
+	return *this;
+}
+
+template<class T>
+ChainNode<T>* Chain<T>::GetLastNode(ChainNode<T>* node)
+{
+	ChainNode<T> *current = first;
+	while(current)
+	{
+		if(current->link == node)
+		{
+			return current;
+		}
+		current = current->link;
+	}
+	return 0;
+}
+
+template<class T>
+Chain<T>& Chain<T>::InsertionSort()
+{
+	ChainNode<T> *current = first;
+	ChainNode<T> *next = current->link;
+	ChainNode<T>* temp;
+	while(next)
+	{
+		ChainNode<T> *x = next->link;	//保存下一个节点，用于下次循环
+		current = first;
+		while(current != next)
+		{
+			if(current->data > next->data)
+			{
+				temp = GetLastNode(next);
+				if(temp)
+				{
+					temp->link = next->link;
+				}
+				if(current == first)
+				{
+					ChainNode<T>* temp = first;
+					first = next;
+					first->link = temp;
+				}
+				else
+				{
+					temp = GetLastNode(current);
+					temp->link = next;
+				}
+				next->link = current;
+				break;
+			}
+			current = current->link;
+		}
+		next = x;
 	}
 
 	return *this;
