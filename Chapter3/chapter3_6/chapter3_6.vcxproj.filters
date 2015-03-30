@@ -33,6 +33,12 @@
     <ClInclude Include="xcept.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SimChain.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SimChainIterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +54,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="xcept.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SimChain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SimChainIterator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
