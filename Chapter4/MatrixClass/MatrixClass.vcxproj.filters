@@ -30,6 +30,12 @@
     <ClInclude Include="xcept.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SparseMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Term.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +48,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="xcept.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SparseMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Term.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

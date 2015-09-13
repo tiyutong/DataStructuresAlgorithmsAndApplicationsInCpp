@@ -3,6 +3,9 @@
 
 #include "stdafx.h"
 #include "Matrix.h"
+#include "SparseMatrix.h"
+#include "Term.h"
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -23,6 +26,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << b << endl;
 	cout << c << endl;
 	cout << d << endl;
+
+	SparseMatrix<int> sparseMatrix(10);
+	cin >> sparseMatrix;
+	cout << sparseMatrix << endl;
 
 	return 0;
 }

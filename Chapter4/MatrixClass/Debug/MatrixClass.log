@@ -1,16 +1,23 @@
-﻿生成启动时间为 2015/4/8 22:09:05。
-     1>项目“C:\Users\Alex\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\MatrixClass\MatrixClass.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2015/9/14 1:14:09。
+     1>项目“C:\Users\xinma\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\MatrixClass\MatrixClass.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\MatrixClass.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt MatrixClass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\MatrixClass.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt MatrixClass.cpp SparseMatrix.cpp Term.cpp
          MatrixClass.cpp
+         正在生成代码...
+         正在编译...
+         Term.cpp
+         SparseMatrix.cpp
+         正在生成代码...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Alex\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Alex\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Alex\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.lib" /MACHINE:X86 Debug\Matrix.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\xinma\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\xinma\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\xinma\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.lib" /MACHINE:X86 Debug\Matrix.obj
          Debug\MatrixClass.obj
+         Debug\SparseMatrix.obj
          Debug\stdafx.obj
+         Debug\Term.obj
          Debug\xcept.obj
-         MatrixClass.vcxproj -> C:\Users\Alex\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.exe
-     1>已完成生成项目“C:\Users\Alex\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\MatrixClass\MatrixClass.vcxproj”(Build 个目标)的操作。
+         MatrixClass.vcxproj -> C:\Users\xinma\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\Debug\MatrixClass.exe
+     1>已完成生成项目“C:\Users\xinma\Documents\GitHub\DataStructuresAlgorithmsAndApplicationsInCpp\Chapter4\MatrixClass\MatrixClass.vcxproj”(Build 个目标)的操作。
 
-生成成功。
+已成功生成。
 
-已用时间 00:00:00.86
+已用时间 00:00:02.13
