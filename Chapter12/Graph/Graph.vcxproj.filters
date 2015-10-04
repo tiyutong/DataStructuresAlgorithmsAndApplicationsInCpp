@@ -72,6 +72,18 @@
     <ClInclude Include="make2db.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="network.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="undirect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lqueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lstack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -123,6 +135,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="make2db.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lqueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lstack.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

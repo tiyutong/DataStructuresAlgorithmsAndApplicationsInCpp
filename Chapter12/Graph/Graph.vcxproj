@@ -159,9 +159,13 @@
     <ClInclude Include="ldigraph.h" />
     <ClInclude Include="lgbase.h" />
     <ClInclude Include="lgraph.h" />
+    <ClInclude Include="lqueue.h" />
+    <ClInclude Include="lstack.h" />
     <ClInclude Include="make2db.h" />
+    <ClInclude Include="network.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="undirect.h" />
     <ClInclude Include="xcept.h" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +183,8 @@
     <ClCompile Include="ldfs.cpp" />
     <ClCompile Include="ldigraph.cpp" />
     <ClCompile Include="lgraph.cpp" />
+    <ClCompile Include="lqueue.cpp" />
+    <ClCompile Include="lstack.cpp" />
     <ClCompile Include="make2db.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
